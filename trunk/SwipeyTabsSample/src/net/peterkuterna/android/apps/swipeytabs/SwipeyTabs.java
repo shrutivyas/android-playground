@@ -57,7 +57,7 @@ public class SwipeyTabs extends ViewGroup implements OnPageChangeListener {
 
 	private Paint mCachedTabPaint;
 
-	private boolean mInitializeTabs = true;
+	private int mWidth = -1;
 
 	public SwipeyTabs(Context context) {
 		this(context, null);
@@ -133,7 +133,7 @@ public class SwipeyTabs extends ViewGroup implements OnPageChangeListener {
 			mRightTabPos = new int[count];
 			mCurrentTabPos = new int[count];
 
-			mInitializeTabs = true;
+			mWidth = -1;
 
 			requestLayout();
 		}
@@ -259,8 +259,8 @@ public class SwipeyTabs extends ViewGroup implements OnPageChangeListener {
 				resolveSize(height + mBottomBarHeight + getPaddingTop()
 						+ getPaddingBottom(), heightMeasureSpec));
 
-		if (mInitializeTabs) {
-			mInitializeTabs = false;
+		if (mWidth != widthSize) {
+			mWidth = widthSize;
 			updateTabPositions(true);
 		}
 	}
