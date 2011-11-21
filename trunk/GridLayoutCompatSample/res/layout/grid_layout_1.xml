@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2011 Peter Kuterna
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<net.peterkuterna.android.apps.gridlayout.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gl="http://schemas.android.com/apk/res/net.peterkuterna.android.apps.gridlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    gl:alignmentMode="alignBounds"
+    gl:columnCount="4"
+    gl:rowOrderPreserved="false"
+    gl:useDefaultMargins="true">
+
+    <TextView
+        gl:layout_columnSpan="4"
+        android:layout_gravity="center_horizontal"
+        android:text="Email setup"
+        android:textSize="32dip" />
+
+    <TextView
+        gl:layout_columnSpan="4"
+        android:layout_gravity="left"
+        android:text="You can configure email in just a few steps:"
+        android:textSize="16dip" />
+
+    <TextView
+        android:layout_gravity="right"
+        android:text="Email address:" />
+
+    <EditText android:ems="10" />
+
+    <TextView
+        gl:layout_column="0"
+        android:layout_gravity="right"
+        android:text="Password:" />
+
+    <EditText android:ems="8" />
+
+    <net.peterkuterna.android.apps.gridlayout.Space
+        gl:layout_column="2"
+        android:layout_gravity="fill"
+        gl:layout_row="2"
+        gl:layout_rowSpan="3" />
+
+    <Button
+        gl:layout_column="3"
+        gl:layout_row="5"
+        android:text="Manual setup" />
+
+    <Button
+        gl:layout_column="3"
+        android:layout_gravity="fill_horizontal"
+        android:text="Next" />
+
+</net.peterkuterna.android.apps.gridlayout.GridLayout>
